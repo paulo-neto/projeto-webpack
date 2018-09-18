@@ -2,8 +2,11 @@ import { NegociacaoController } from './controllers/NegociacaoController.js';
 import { Negociacao } from './domain/index.js';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
+import 'bootstrap/js/modal.js';
 //exemplificando importacao de css especifico
 import '../css/app.css';
+//testando jQuery em escopo global
+$('h1').on('click',() => alert('você me clicou'));
 
 const controller = new NegociacaoController();
 const negociacao = new Negociacao(new Date(), 1, 200);
